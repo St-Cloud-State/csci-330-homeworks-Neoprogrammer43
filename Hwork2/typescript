@@ -1,5 +1,5 @@
-Script started on 2025-02-05 05:53:22+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="150" LINES="13"]
-[0;32m@Neoprogrammer43 [0m➜ [1;34m/workspaces/csci-330-homeworks-Neoprogrammer43/Hwork2 [0;36m([1;31mmain[0;36m) [0m$ sbcl
+Script started on 2025-02-05 06:16:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="150" LINES="13"]
+[0;32m@Neoprogrammer43 [0m➜ [1;34m/workspaces/csci-330-homeworks-Neoprogrammer43/Hwork2 [0;36m([1;31mmain[0;36m) [0m$ sbclbclbclbclhhh[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksbcl
 This is SBCL 1.4.3, an implementation of ANSI Common Lisp.
 More information about SBCL is available at <http://www.sbcl.org/>.
 
@@ -35,85 +35,47 @@ BROWN
 * (cons 'patrick (list 'seymour 'marvin))
 
 (PATRICK SEYMOUR MARVIN)
-* (mystery ’(dancing bear))
-; in: MYSTERY ’
-;     (DANCING BEAR)
-; 
-; caught WARNING:
-;   undefined variable: BEAR
-; 
-; caught STYLE-WARNING:
-;   undefined function: DANCING
+* (defun mysr tery(x   (x) (list (second x) (first x)))
 
-;     (MYSTERY ’ (DANCING BEAR))
-; 
-; caught STYLE-WARNING:
-;   undefined function: MYSTERY
-; 
-; caught WARNING:
-;   undefined variable: ’
-; 
-; compilation unit finished
-;   Undefined functions:
-;     DANCING MYSTERY
-;   Undefined variables:
-;     BEAR ’
-;   caught 2 WARNING conditions
-;   caught 2 STYLE-WARNING conditions
+MYSTERY
+* (mystery '(dancing bear))
+
+(BEAR DANCING)
+* (mystery ’dancing ’bear)
 
 debugger invoked on a UNBOUND-VARIABLE in thread
 #<THREAD "main thread" RUNNING {9461061}>:
-  The variable ’ is unbound.
+  The variable ’DANCING is unbound.
 
 Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
 
 restarts (invokable by number or by possibly-abbreviated name):
   0: [ABORT] Exit debugger, returning to top level.
 
-((LAMBDA ()))
-   source: (MYSTERY ’ (DANCING BEAR))
-0] (defun mystery (x)
-(list (second x) (first x)))
-; in: DEFUN MYSTERY
-;     (DEFUN MYSTERY (X) (LIST (SECOND X) (FIRST X)))
-; --> PROGN SB-IMPL::%DEFUN SB-INT:NAMED-LAMBDA 
-; ==>
-;   #'(SB-INT:NAMED-LAMBDA MYSTERY
-;         (X)
-;       (BLOCK MYSTERY (LIST (SECOND X) (FIRST X))))
-; 
-; caught STYLE-WARNING:
-;   (The function was previously called with two arguments, but wants at most one.)
-; 
-; compilation unit finished
-;   caught 1 STYLE-WARNING condition
-MYSTERY
-0] (mystery ’(dancing bear))
-; in: MYSTERY ’
-;     (MYSTERY ’ (DANCING BEAR))
+(SB-INT:SIMPLE-EVAL-IN-LEXENV ’DANCING #<NULL-LEXENV>)
+0] (mystery ’(zowie))
+; in: MYSTERY ’DANCING
+;     (MYSTERY ’ (ZOWIE))
 ; 
 ; caught STYLE-WARNING:
 ;   The function was called with two arguments, but wants exactly one.
-; in: MYSTERY ’
-;     (DANCING BEAR)
-; 
-; caught WARNING:
-;   undefined variable: BEAR
+; in: MYSTERY ’DANCING
+;     (ZOWIE)
 ; 
 ; caught STYLE-WARNING:
-;   undefined function: DANCING
+;   undefined function: ZOWIE
 
-;     (MYSTERY ’ (DANCING BEAR))
+;     (MYSTERY ’ (ZOWIE))
 ; 
 ; caught WARNING:
 ;   undefined variable: ’
 ; 
 ; compilation unit finished
 ;   Undefined function:
-;     DANCING
-;   Undefined variables:
-;     BEAR ’
-;   caught 2 WARNING conditions
+;     ZOWIE
+;   Undefined variable:
+;     ’
+;   caught 1 WARNING condition
 ;   caught 2 STYLE-WARNING conditions
 
 debugger invoked on a UNBOUND-VARIABLE in thread
@@ -126,28 +88,81 @@ restarts (invokable by number or by possibly-abbreviated name):
   0: [ABORT] Reduce debugger level (to debug level 1).
   1:         Exit debugger, returning to top level.
 
-((LAMBDA (#:G390)) #<unused argument>)
-   source: (MYSTERY ’ (DANCING BEAR))
-0[2] (defun mystery (x) (list (dse   second x) (first x)))
+((LAMBDA (#:G389)) #<unused argument>)
+   source: (MYSTERY ’ (ZOWIE))
+0[2] (mysery     tery '(zowie)))
 
-WARNING: redefining COMMON-LISP-USER::MYSTERY in DEFUN
-MYSTERY
-0[2] (mystery 'd (dancing bear))
+(NIL ZOWIE)
+0[2] ( m  mystery (list 'first 'second))
 
-(BEAR DANCING)
-0[2] (mystery 'dancing 'bear)
-; in: MYSTERY ’
-;     (MYSTERY 'DANCING 'BEAR)
+(SECOND FIRST)
+0[2] ( (defun speak (x y) (list 'all x 'is y))
+
+SPEAK
+0[2] (defun speak (x y) (list 'all   'x  'is   y 'y))
+; in: DEFUN SPEAK
+;     (DEFUN SPEAK (X Y) (LIST 'ALL 'X 'IS 'Y))
+; --> PROGN SB-IMPL::%DEFUN SB-INT:NAMED-LAMBDA 
+; ==>
+;   #'(SB-INT:NAMED-LAMBDA SPEAK
+;         (X Y)
+;       (BLOCK SPEAK (LIST 'ALL 'X 'IS 'Y)))
 ; 
 ; caught STYLE-WARNING:
-;   The function was called with two arguments, but wants exactly one.
+;   The variable X is defined but never used.
+; 
+; caught STYLE-WARNING:
+;   The variable Y is defined but never used.
 ; 
 ; compilation unit finished
-;   caught 1 STYLE-WARNING condition
+;   caught 2 STYLE-WARNING conditions
+WARNING: redefining COMMON-LISP-USER::SPEAK in DEFUN
+SPEAK
+0[2] (defun speak (x) (y) (list 'all   x 'is y))
+; in: DEFUN SPEAK
+;     (LIST 'ALL X 'IS Y)
+; 
+; caught WARNING:
+;   undefined variable: Y
 
-debugger invoked on a SB-INT:SIMPLE-PROGRAM-ERROR in thread
+;     (Y)
+; 
+; caught STYLE-WARNING:
+;   undefined function: Y
+; 
+; compilation unit finished
+;   Undefined function:
+;     Y
+;   Undefined variable:
+;     Y
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+WARNING: redefining COMMON-LISP-USER::SPEAK in DEFUN
+SPEAK
+0[2] (defun speak ((x))    (y)) (list all 'x is 'y))
+; in: DEFUN SPEAK
+;     (DEFUN SPEAK ((X) (Y)) (LIST ALL 'X IS 'Y))
+; --> PROGN SB-IMPL::%DEFUN SB-INT:NAMED-LAMBDA 
+; ==>
+;   #'(SB-INT:NAMED-LAMBDA SPEAK
+;         ((X) (Y))
+;       (BLOCK SPEAK (LIST ALL 'X IS 'Y)))
+; 
+; caught ERROR:
+;   Required argument is not a symbol: (X)
+; 
+; compilation unit finished
+;   caught 1 ERROR condition
+
+debugger invoked on a SB-INT:COMPILED-PROGRAM-ERROR in thread
 #<THREAD "main thread" RUNNING {9461061}>:
-  invalid number of arguments: 2
+  Execution of a form compiled with errors.
+Form:
+  #'(SB-INT:NAMED-LAMBDA SPEAK
+      ((X) (Y))
+    (BLOCK SPEAK (LIST ALL 'X IS 'Y)))
+Compile-time error:
+  Required argument is not a symbol: (X)
 
 Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
 
@@ -156,66 +171,15 @@ restarts (invokable by number or by possibly-abbreviated name):
   1:         Reduce debugger level (to debug level 1).
   2:         Exit debugger, returning to top level.
 
-(MYSTERY DANCING BEAR) [external]
-   source: (DEFUN MYSTERY (X) (LIST (SECOND X) (FIRST X)))
-0[3] (mystery '(zowie))
-
-(NIL ZOWIE)
-0[3] (mysery     tery (list 'first 'second))
-
-(SECOND FIRST)
-0[3] (defun speak (x y) (list ’all x ’is y))
-; in: DEFUN SPEAK
-;     (LIST ’ALL X ’IS Y)
-; 
-; caught WARNING:
-;   undefined variable: ’ALL
-; 
-; caught WARNING:
-;   undefined variable: ’IS
-; 
-; compilation unit finished
-;   Undefined variables:
-;     ’ALL ’IS
-;   caught 2 WARNING conditions
-SPEAK
-0[3] (defun speak (x y) (list 'all x 'is y))
-
-WARNING: redefining COMMON-LISP-USER::SPEAK in DEFUN
-SPEAK
-0[3] (list ’cons t nil)
-; in: MYSTERY ’
-;     (LIST ’CONS T NIL)
-; 
-; caught WARNING:
-;   undefined variable: ’CONS
-; 
-; compilation unit finished
-;   Undefined variable:
-;     ’CONS
-;   caught 1 WARNING condition
-
-debugger invoked on a UNBOUND-VARIABLE in thread
-#<THREAD "main thread" RUNNING {9461061}>:
-  The variable ’CONS is unbound.
-
-Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
-
-restarts (invokable by number or by possibly-abbreviated name):
-  0: [ABORT] Reduce debugger level (to debug level 3).
-  1:         Reduce debugger level (to debug level 2).
-  2:         Reduce debugger level (to debug level 1).
-  3:         Exit debugger, returning to top level.
-
-((LAMBDA (#:G398)) #<unused argument>)
-   source: (LIST ’CONS T NIL)
-0[4] (list 'cons t nil)
+((LAMBDA (#:G395)) #<unused argument>)
+   source: (DEFUN SPEAK ((X) (Y)) (LIST ALL 'X IS 'Y))
+0[3] (defun speak ((xx ) (y))                      (list 'cos ns t i nil)
 
 (CONS T NIL)
-0[4] (eval (list 'cons t nil))
+0[3] (eval (list 'cons t nil))
 
 (T)
-0[4] (eval (eval (list 'cons t nil)))
+0[3] (eval (eval (list 'cons t nil)))
 ; in: T
 ;     (T)
 ; 
@@ -235,28 +199,26 @@ debugger invoked on a UNDEFINED-FUNCTION in thread
 Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
 
 restarts (invokable by number or by possibly-abbreviated name):
-  0: [ABORT] Reduce debugger level (to debug level 4).
-  1:         Reduce debugger level (to debug level 3).
-  2:         Reduce debugger level (to debug level 2).
-  3:         Reduce debugger level (to debug level 1).
-  4:         Exit debugger, returning to top level.
+  0: [ABORT] Reduce debugger level (to debug level 3).
+  1:         Reduce debugger level (to debug level 2).
+  2:         Reduce debugger level (to debug level 1).
+  3:         Exit debugger, returning to top level.
 
 ("undefined function")
-0[5] (apply #'cons '(t nil))
+0[4] (apply #'cons '(t nil))
 ; No debug variables for current frame: using EVAL instead of EVAL-IN-FRAME.
 (T)
-0[5] (e  (eval nil)
+0[4] (eval nil)
 ; No debug variables for current frame: using EVAL instead of EVAL-IN-FRAME.
 NIL
-0[5] (list 'eval nil)
+0[4] (list 'eval nil)
 ; No debug variables for current frame: using EVAL instead of EVAL-IN-FRAME.
 (EVAL NIL)
-0[5] (eval (list 'eval nil))
+0[4] (evl al (list 'eval nil))
 ; No debug variables for current frame: using EVAL instead of EVAL-IN-FRAME.
 NIL
-0[5] 
-0[4] 
-0[3] (EXIT)
+0[4] ) (EI XIT)
+; No debug variables for current frame: using EVAL instead of EVAL-IN-FRAME.
 [0;32m@Neoprogrammer43 [0m➜ [1;34m/workspaces/csci-330-homeworks-Neoprogrammer43/Hwork2 [0;36m([1;31mmain[0;36m) [0m$ exit
 
-Script done on 2025-02-05 06:04:27+00:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2025-02-05 06:30:33+00:00 [COMMAND_EXIT_CODE="0"]

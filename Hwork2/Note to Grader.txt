@@ -1,0 +1,3 @@
+Not to grader: All the functions executed the ones as intended, even those that were supposed to give errors like
+in 3.21. The exception to this is (mystery ’(zowie)). The first time I did this function I put the apostrophe in the 
+wrong place. However, I fixed this error by the second time I typed it in and it executed sucesfully. 
