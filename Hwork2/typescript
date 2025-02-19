@@ -214,7 +214,7 @@ NIL
 0[4] (list 'eval nil)
 ; No debug variables for current frame: using EVAL instead of EVAL-IN-FRAME.
 (EVAL NIL)
-0[4] (evl al (list 'eval nil))
+0[4] (ev (list 'eval nil))
 ; No debug variables for current frame: using EVAL instead of EVAL-IN-FRAME.
 NIL
 0[4] ) (EI XIT)

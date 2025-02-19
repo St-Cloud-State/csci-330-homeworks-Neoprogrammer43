@@ -1,0 +1,68 @@
+Script started on 2025-02-19 12:41:13+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="151" LINES="13"]
+[0;32m@Neoprogrammer43 [0m➜ [1;34m/workspaces/csci-330-homeworks-Neoprogrammer43 [0;36m([1;31mmain[0;36m) [0m$ sbcl
+This is SBCL 1.4.3, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+* (defun merge-lists (left right)
+  "Merge two sorted lists LEFT and RIGHT into one sorted list.
+   Compares the first elements of both lists, appends the smaller element to the result,
+   and recursively merges the rest of the lists."
+  (cond ((null left) right)  ; If LEFT is empty, return RIGHT as is
+        ((null right) left)  ; If RIGHT is empty, return LEFT as is
+        ((<= (first left) (first right))  ; If the first element of LEFT is smaller or equal to the first element of RIGHT
+         (cons (first left) (merge-lists (rest left) right)))  ; Add the first element of LEFT and recursively merge the rest
+        (t  ; Otherwise, the first element of RIGHT is smaller
+         (cons (first right) (merge-lists left (rest right))))))  ; Add the first element of RIGHT and recursively merge the rest
+
+(defun make-pairs (lst)
+  "Partition 
+MERGE-LISTS
+* LST into sorted pairs.
+   Each pair is sorted in ascending order.
+   If LST has an odd number of elements, the last sublist contains a single element."
+  (cond ((null lst) nil)  ; If the list is empty, return an empty list
+        ((null (cdr lst)) (list lst))  ; If the list has only one element, return the list as is
+        (t  ; Otherwise, create pairs by taking two consecutive elements
+         (let ((a (car lst))  ; First element of the pair
+               (b (cadr lst)))  ; Second element of the pair
+           (cons (if (<= a b)  ; If the first element is smaller or equal to the second
+                     (list a b)  ; Return the pair as is
+                     (list b a))  ; Otherwise, swap the elements
+                 (make-pairs (cddr lst)))))))  ; Recursively process the rest of the list
+
+(defun merge-pass (lists)
+  "Merge ad
+MAKE-PAIRS
+* jacent sorted sublists in LISTS.
+   This function merges pairs of lists and returns a new list of sorted sublists after one merge pass."
+  (cond ((null lists) nil)  ; If the list of sublists is empty, return nil
+        ((null (cdr lists)) lists)  ; If there is only one sublist, return it as is
+        (t  ; Otherwise, merge the first two sublists, then recursively merge the rest
+         (cons (merge-lists (car lists) (cadr lists))  ; Merge the first two sublists
+               (merge-pass (cddr lists))))))  ; Recursively merge the remaining sublists
+
+(defun bottom-up-mergesort (lst)
+  "Sort 
+MERGE-PASS
+* LST using a bottom-up merge sort.
+   First, partition LST into sorted pairs, then repeatedly merge adjacent sublists until one sorted list remains."
+  (if (null lst)  ; If the list is empty, return nil
+      nil
+      (let ((sublists (make-pairs lst)))  ; Partition the list into sorted pairs
+        (labels ((merge-all (lists)  ; Local recursive function to merge all sublists
+                   (if (null (cdr lists))  ; If there is only one sublist, return it
+                       (car lists)
+                       (merge-all (merge-pass lists)))))  ; Otherwise, recursively merge adjacent sublists
+          (merge-all sublists)))))  ; Start the merge process with the initial sorted pairs   (bottom-up-mergesort '(1 7 2 1 8 6 5 3 7 9 4))^[[D^[[D                               3 5 7 9 2 4 6 8))
+
+BOTTOM-UP-MERGESORT
+* ) (bottom-up-mergesort '(1 3 5 7 9 2 4 6 8))  
+
+(1 2 3 4 5 6 7 8 9)
+* [0;32m@Neoprogrammer43 [0m➜ [1;34m/workspaces/csci-330-homeworks-Neoprogrammer43 [0;36m([1;31mmain[0;36m) [0m$ exit
+
+Script done on 2025-02-19 12:42:48+00:00 [COMMAND_EXIT_CODE="0"]
