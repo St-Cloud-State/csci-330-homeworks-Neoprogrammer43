@@ -1,0 +1,462 @@
+Script started on 2025-03-19 08:39:34+00:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="150" LINES="13"]
+[0;32m@Neoprogrammer43 [0m➜ [1;34m/workspaces/csci-330-homeworks-Neoprogrammer43/Hwork5 [0;36m([1;31mmain[0;36m) [0m$ (load :[K"hwk5.lisp")
+bash: load: command not found
+[0;32m@Neoprogrammer43 [1;31m➜ [1;34m/workspaces/csci-330-homeworks-Neoprogrammer43/Hwork5 [0;36m([1;31mmain[0;36m) [0m$ sbcl
+This is SBCL 1.4.3, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+* (load "hwk5.lisp")
+
+; file: /workspaces/csci-330-homeworks-Neoprogrammer43/Hwork5/hwk5.lisp
+; in: DEFUN IFN
+;     (EFN REST)
+; 
+; caught STYLE-WARNING:
+;   undefined function: EFN
+
+;     (IPRIMEFN REST)
+; 
+; caught STYLE-WARNING:
+;   undefined function: IPRIMEFN
+
+;     (SFN REST)
+; 
+; caught STYLE-WARNING:
+;   undefined function: SFN
+; 
+; compilation unit finished
+;   Undefined functions:
+;     EFN IPRIMEFN SFN
+;   caught 3 STYLE-WARNING conditions
+
+; file: /workspaces/csci-330-homeworks-Neoprogrammer43/Hwork5/hwk5.lisp
+; in: DEFUN IPRIMEFN
+;     (SFN REST)
+; 
+; caught STYLE-WARNING:
+;   undefined function: SFN
+; 
+; compilation unit finished
+;   Undefined function:
+;     SFN
+;   caught 1 STYLE-WARNING condition
+
+; file: /workspaces/csci-330-homeworks-Neoprogrammer43/Hwork5/hwk5.lisp
+; in: DEFUN EFN
+;     (EPRIMEFN REST)
+; 
+; caught STYLE-WARNING:
+;   undefined function: EPRIMEFN
+
+;     (GFN STR)
+; 
+; caught STYLE-WARNING:
+;   undefined function: GFN
+; 
+; compilation unit finished
+;   Undefined functions:
+;     EPRIMEFN GFN
+;   caught 2 STYLE-WARNING conditions
+
+; file: /workspaces/csci-330-homeworks-Neoprogrammer43/Hwork5/hwk5.lisp
+; in: DEFUN EPRIMEFN
+;     (GFN REST)
+; 
+; caught STYLE-WARNING:
+;   undefined function: GFN
+; 
+; compilation unit finished
+;   Undefined function:
+;     GFN
+;   caught 1 STYLE-WARNING condition
+
+; file: /workspaces/csci-330-homeworks-Neoprogrammer43/Hwork5/hwk5.lisp
+; in: DEFUN SFN
+;     (LFN REST)
+; 
+; caught STYLE-WARNING:
+;   undefined function: LFN
+; 
+; compilation unit finished
+;   Undefined function:
+;     LFN
+;   caught 1 STYLE-WARNING condition
+
+; file: /workspaces/csci-330-homeworks-Neoprogrammer43/Hwork5/hwk5.lisp
+; in: DEFUN LFN
+;     (LPRIMEFN REST)
+; 
+; caught STYLE-WARNING:
+;   undefined function: LPRIMEFN
+; 
+; compilation unit finished
+;   Undefined function:
+;     LPRIMEFN
+;   caught 1 STYLE-WARNING condition
+
+T
+* (pase    rse (i x s e s)               '(i x s e s)    )
+
+(IN PARSE) 
+(I X S E S) 
+(IN IFN) 
+(I X S E S) 
+(IN EFN) 
+(X S E S) 
+(IN GFN) 
+(X S E S) 
+(IN EPRIMEFN) 
+(S E S) 
+(IN SFN) 
+(S E S) 
+(IN IPRIMEFN) 
+(E S) 
+(IN SFN) 
+(S) 
+"Parse successful!" 
+"Parse successful!"
+* (parse '(i x o y s e s))
+
+(IN PARSE) 
+(I X O Y S E S) 
+(IN IFN) 
+(I X O Y S E S) 
+(IN EFN) 
+(X O Y S E S) 
+(IN GFN) 
+(X O Y S E S) 
+(IN EPRIMEFN) 
+(O Y S E S) 
+(IN GFN) 
+(Y S E S) 
+(IN EPRIMEFN) 
+(S E S) 
+(IN SFN) 
+(S E S) 
+(IN IPRIMEFN) 
+(E S) 
+(IN SFN) 
+(S) 
+"Parse successful!" 
+"Parse successful!"
+* ( (pas rse " '(i x o y o z s e s)
+)
+
+(IN PARSE) 
+(I X O Y O Z S E S) 
+(IN IFN) 
+(I X O Y O Z S E S) 
+(IN EFN) 
+(X O Y O Z S E S) 
+(IN GFN) 
+(X O Y O Z S E S) 
+(IN EPRIMEFN) 
+(O Y O Z S E S) 
+(IN GFN) 
+(Y O Z S E S) 
+(IN EPRIMEFN) 
+(O Z S E S) 
+(IN GFN) 
+(Z S E S) 
+(IN EPRIMEFN) 
+(S E S) 
+(IN SFN) 
+(S E S) 
+(IN IPRIMEFN) 
+(E S) 
+(IN SFN) 
+(S) 
+"Parse successful!" 
+"Parse successful!"
+* (parse '(i x o y o z d s b e s))
+
+(IN PARSE) 
+(I X O Y O Z D S B E S) 
+(IN IFN) 
+(I X O Y O Z D S B E S) 
+(IN EFN) 
+(X O Y O Z D S B E S) 
+(IN GFN) 
+(X O Y O Z D S B E S) 
+(IN EPRIMEFN) 
+(O Y O Z D S B E S) 
+(IN GFN) 
+(Y O Z D S B E S) 
+(IN EPRIMEFN) 
+(O Z D S B E S) 
+(IN GFN) 
+(Z D S B E S) 
+(IN EPRIMEFN) 
+(D S B E S) 
+(IN SFN) 
+(D S B E S) 
+(IN LFN) 
+(S B E S) 
+(IN LPRIMEFN) 
+(B E S) 
+(IN IPRIMEFN) 
+(E S) 
+(IN SFN) 
+(S) 
+"Parse successful!" 
+"Parse successful!"
+* (parse '(i x o y o z d s s s b e s))
+
+(IN PARSE) 
+(I X O Y O Z D S S S B E S) 
+(IN IFN) 
+(I X O Y O Z D S S S B E S) 
+(IN EFN) 
+(X O Y O Z D S S S B E S) 
+(IN GFN) 
+(X O Y O Z D S S S B E S) 
+(IN EPRIMEFN) 
+(O Y O Z D S S S B E S) 
+(IN GFN) 
+(Y O Z D S S S B E S) 
+(IN EPRIMEFN) 
+(O Z D S S S B E S) 
+(IN GFN) 
+(Z D S S S B E S) 
+(IN EPRIMEFN) 
+(D S S S B E S) 
+(IN SFN) 
+(D S S S B E S) 
+(IN LFN) 
+(S S S B E S) 
+(IN LPRIMEFN) 
+(S S B E S) 
+(IN LPRIMEFN) 
+(S B E S) 
+(IN LPRIMEFN) 
+(B E S) 
+(IN IPRIMEFN) 
+(E S) 
+(IN SFN) 
+(S) 
+"Parse successful!" 
+"Parse successful!"
+* (parse '(i x o y o z o w d s s s b e s))
+
+(IN PARSE) 
+(I X O Y O Z O W D S S S B E S) 
+(IN IFN) 
+(I X O Y O Z O W D S S S B E S) 
+(IN EFN) 
+(X O Y O Z O W D S S S B E S) 
+(IN GFN) 
+(X O Y O Z O W D S S S B E S) 
+(IN EPRIMEFN) 
+(O Y O Z O W D S S S B E S) 
+(IN GFN) 
+(Y O Z O W D S S S B E S) 
+(IN EPRIMEFN) 
+(O Z O W D S S S B E S) 
+(IN GFN) 
+(Z O W D S S S B E S) 
+(IN EPRIMEFN) 
+(O W D S S S B E S) 
+(IN GFN) 
+(W D S S S B E S) 
+(IN EPRIMEFN) 
+(D S S S B E S) 
+(IN SFN) 
+(D S S S B E S) 
+(IN LFN) 
+(S S S B E S) 
+(IN LPRIMEFN) 
+(S S B E S) 
+(IN LPRIMEFN) 
+(S B E S) 
+(IN LPRIMEFN) 
+(B E S) 
+(IN IPRIMEFN) 
+(E S) 
+(IN SFN) 
+(S) 
+"Parse successful!" 
+"Parse successful!"
+* ((i x o y o z o w d s s s s s b e s)                                   parse '(i x o y o z o w d s s s s s b e s))
+
+(IN PARSE) 
+(I X O Y O Z O W D S S S S S B E S) 
+(IN IFN) 
+(I X O Y O Z O W D S S S S S B E S) 
+(IN EFN) 
+(X O Y O Z O W D S S S S S B E S) 
+(IN GFN) 
+(X O Y O Z O W D S S S S S B E S) 
+(IN EPRIMEFN) 
+(O Y O Z O W D S S S S S B E S) 
+(IN GFN) 
+(Y O Z O W D S S S S S B E S) 
+(IN EPRIMEFN) 
+(O Z O W D S S S S S B E S) 
+(IN GFN) 
+(Z O W D S S S S S B E S) 
+(IN EPRIMEFN) 
+(O W D S S S S S B E S) 
+(IN GFN) 
+(W D S S S S S B E S) 
+(IN EPRIMEFN) 
+(D S S S S S B E S) 
+(IN SFN) 
+(D S S S S S B E S) 
+(IN LFN) 
+(S S S S S B E S) 
+(IN LPRIMEFN) 
+(S S S S B E S) 
+(IN LPRIMEFN) 
+(S S S B E S) 
+(IN LPRIMEFN) 
+(S S B E S) 
+(IN LPRIMEFN) 
+(S B E S) 
+(IN LPRIMEFN) 
+(B E S) 
+(IN IPRIMEFN) 
+(E S) 
+(IN SFN) 
+(S) 
+"Parse successful!" 
+"Parse successful!"
+* (parse '((i x x e s)
+)
+)
+
+(IN PARSE) 
+((I X X E S)) 
+(IN IFN) 
+((I X X E S)) 
+"Parse error!" 
+"Parse error!"
+* (parse '(i x z x s x s))
+
+(IN PARSE) 
+(I X Z X S X S) 
+(IN IFN) 
+(I X Z X S X S) 
+(IN EFN) 
+(X Z X S X S) 
+(IN GFN) 
+(X Z X S X S) 
+(IN EPRIMEFN) 
+(Z X S X S) 
+(IN SFN) 
+(Z X S X S) 
+(IN IPRIMEFN) 
+(X S X S ERR) 
+"Parse error!" 
+"Parse error!"
+* (parse '((i x z y x z s z s))
+)
+
+(IN PARSE) 
+((I X Z Y X Z S Z S)) 
+(IN IFN) 
+((I X Z Y X Z S Z S)) 
+"Parse error!" 
+"Parse error!"
+* (parse '(i x o y x x d s b x s))
+
+(IN PARSE) 
+(I X O Y X X D S B X S) 
+(IN IFN) 
+(I X O Y X X D S B X S) 
+(IN EFN) 
+(X O Y X X D S B X S) 
+(IN GFN) 
+(X O Y X X D S B X S) 
+(IN EPRIMEFN) 
+(O Y X X D S B X S) 
+(IN GFN) 
+(Y X X D S B X S) 
+(IN EPRIMEFN) 
+(X X D S B X S) 
+(IN SFN) 
+(X X D S B X S) 
+(IN IPRIMEFN) 
+(X D S B X S ERR) 
+"Parse error!" 
+"Parse error!"
+* (parse '(i x x y z z d s x s b e s))
+
+(IN PARSE) 
+(I X X Y Z Z D S X S B E S) 
+(IN IFN) 
+(I X X Y Z Z D S X S B E S) 
+(IN EFN) 
+(X X Y Z Z D S X S B E S) 
+(IN GFN) 
+(X X Y Z Z D S X S B E S) 
+(IN EPRIMEFN) 
+(X Y Z Z D S X S B E S) 
+(IN SFN) 
+(X Y Z Z D S X S B E S) 
+(IN IPRIMEFN) 
+(Y Z Z D S X S B E S ERR) 
+"Parse error!" 
+"Parse error!"
+* (parse '(i x o y x z o w d x s s b z s))
+
+(IN PARSE) 
+(I X O Y X Z O W D X S S B Z S) 
+(IN IFN) 
+(I X O Y X Z O W D X S S B Z S) 
+(IN EFN) 
+(X O Y X Z O W D X S S B Z S) 
+(IN GFN) 
+(X O Y X Z O W D X S S B Z S) 
+(IN EPRIMEFN) 
+(O Y X Z O W D X S S B Z S) 
+(IN GFN) 
+(Y X Z O W D X S S B Z S) 
+(IN EPRIMEFN) 
+(X Z O W D X S S B Z S) 
+(IN SFN) 
+(X Z O W D X S S B Z S) 
+(IN IPRIMEFN) 
+(Z O W D X S S B Z S ERR) 
+"Parse error!" 
+"Parse error!"
+* (parse '(i x o y o z o z d s x s s s b e s))
+
+(IN PARSE) 
+(I X O Y O Z O Z D S X S S S B E S) 
+(IN IFN) 
+(I X O Y O Z O Z D S X S S S B E S) 
+(IN EFN) 
+(X O Y O Z O Z D S X S S S B E S) 
+(IN GFN) 
+(X O Y O Z O Z D S X S S S B E S) 
+(IN EPRIMEFN) 
+(O Y O Z O Z D S X S S S B E S) 
+(IN GFN) 
+(Y O Z O Z D S X S S S B E S) 
+(IN EPRIMEFN) 
+(O Z O Z D S X S S S B E S) 
+(IN GFN) 
+(Z O Z D S X S S S B E S) 
+(IN EPRIMEFN) 
+(O Z D S X S S S B E S) 
+(IN GFN) 
+(Z D S X S S S B E S) 
+(IN EPRIMEFN) 
+(D S X S S S B E S) 
+(IN SFN) 
+(D S X S S S B E S) 
+(IN LFN) 
+(S X S S S B E S) 
+(IN LPRIMEFN) 
+(X S S S B E S) 
+(IN IPRIMEFN) 
+(S S S B E S ERR) 
+"Parse error!" 
+"Parse error!"
+* [0;32m@Neoprogrammer43 [0m➜ [1;34m/workspaces/csci-330-homeworks-Neoprogrammer43/Hwork5 [0;36m([1;31mmain[0;36m) [0m$ exit
+
+Script done on 2025-03-19 08:44:39+00:00 [COMMAND_EXIT_CODE="0"]
